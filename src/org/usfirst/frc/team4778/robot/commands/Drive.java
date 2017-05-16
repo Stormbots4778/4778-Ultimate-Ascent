@@ -16,7 +16,7 @@ public class Drive extends Command {
 	@Override
 	protected void execute() {
 		// XXX: conditional controller
-		Robot.drive.arcadeDrive(OI.gamepad, 1, OI.gamepad, 4);
+		Robot.drive.tankDrive(-OI.gamepad.getRawAxis(5), -OI.gamepad.getRawAxis(1), true);
 	}
 
 	@Override

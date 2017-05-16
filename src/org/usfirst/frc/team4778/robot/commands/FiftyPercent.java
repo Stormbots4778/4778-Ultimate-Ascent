@@ -1,22 +1,18 @@
 package org.usfirst.frc.team4778.robot.commands;
 
-import org.usfirst.frc.team4778.robot.subsystems.Shooter;
+import org.usfirst.frc.team4778.robot.RobotMap;
 
 import edu.wpi.first.wpilibj.command.Command;
 
-public class SetShooterSpeed extends Command {
-	private double speed;
-
-	public SetShooterSpeed(double speed) {
-		this.speed = speed;
-	}
+public class FiftyPercent extends Command {
+	public FiftyPercent() {}
 
 	@Override
 	protected void initialize() {}
 
 	@Override
 	protected void execute() {
-		Shooter.setSpeed(speed);
+		RobotMap.speed = 0.5;
 	}
 
 	@Override

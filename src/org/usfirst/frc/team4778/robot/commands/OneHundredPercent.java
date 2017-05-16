@@ -1,21 +1,18 @@
 package org.usfirst.frc.team4778.robot.commands;
 
-import org.usfirst.frc.team4778.robot.Robot;
 import org.usfirst.frc.team4778.robot.RobotMap;
 
 import edu.wpi.first.wpilibj.command.Command;
 
-public class RunLoader extends Command {
-	public RunLoader() {
-		requires(Robot.loader);
-	}
+public class OneHundredPercent extends Command {
+	public OneHundredPercent() {}
 
 	@Override
 	protected void initialize() {}
 
 	@Override
 	protected void execute() {
-		RobotMap.V3.set(1);
+		RobotMap.speed = 1.0;
 	}
 
 	@Override
@@ -24,9 +21,7 @@ public class RunLoader extends Command {
 	}
 
 	@Override
-	protected void end() {
-		RobotMap.V3.set(0);
-	}
+	protected void end() {}
 
 	@Override
 	protected void interrupted() {
